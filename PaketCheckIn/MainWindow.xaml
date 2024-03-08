@@ -5,23 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PaketCheckIn"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="White" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="MainWindow" Height="609" Width="698" Background="White" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid Height="592" VerticalAlignment="Top" HorizontalAlignment="Center" Width="678">
+        <GroupBox Header="Paket-Optionen" Margin="10,20,0,0" HorizontalAlignment="Left" Width="321" Height="298" VerticalAlignment="Top" FontSize="12"/>
+        <GroupBox Header="Umgebungen" Margin="10,325,0,0" HorizontalAlignment="Left" Width="321" Height="141" VerticalAlignment="Top" FontSize="12"/>
+        <GroupBox Header="Informationen zum Paket" Margin="347,20,0,0" HorizontalAlignment="Left" Width="321" Height="446" VerticalAlignment="Top" FontSize="12"/>
 
         <!-- Option wählen -->
-        <Label x:Name="lblChooseOption" Content="Option wählen:" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="344" Height="30"/>
-        <ComboBox x:Name="cbChooseOption" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Width="344" Height="22" SelectedIndex="0" />
+        <Label x:Name="lblChooseOption" Content="Option wählen:" Margin="30,52,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="275" FontSize="14"/>
+        <ComboBox x:Name="cbChooseOption" Margin="30,82,0,0" VerticalAlignment="Top" Height="25" SelectedIndex="0" HorizontalAlignment="Left" Width="275" FontSize="14">
+            <ComboBoxItem Content="Test"></ComboBoxItem>
+        </ComboBox>
 
         <!-- Ordner wählen -->
-        <Label x:Name="lblChooseFolder" Content="Ordner wählen:" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="344" Height="30"/>
-        <ComboBox x:Name="cbChooseFolder" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Width="344" Height="22" SelectedIndex="0" />
+        <Label x:Name="lblChooseFolder" Content="Ordner wählen:" Margin="30,112,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="275" FontSize="14"/>
+        <ComboBox x:Name="cbChooseFolder" Margin="30,142,0,0" SelectedIndex="0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="275" FontSize="14"/>
 
         <!-- Paket wählen -->
-        <Label x:Name="lblChoosePackage" Content="Paket wählen:" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="344" Height="30"/>
-        <ComboBox x:Name="cbChoosePackage" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="344" Height="22" SelectedIndex="0" />
+        <Label x:Name="lblChoosePackage" Content="Paket wählen:" Margin="30,172,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="275" FontSize="14"/>
+        <ComboBox x:Name="cbChoosePackage" Margin="30,202,0,0" VerticalAlignment="Top" Height="25" SelectedIndex="0" HorizontalAlignment="Left" Width="275" FontSize="14"/>
+
+        <!-- Paketversion wählen -->
+        <Label x:Name="lblChoosePackageVersion" Content="Paketversion wählen:" HorizontalAlignment="Left" Margin="30,232,0,0" VerticalAlignment="Top" Width="275" Height="30" FontSize="14"/>
+        <ComboBox x:Name="cbChoosePackageVersion" Margin="30,262,0,0" VerticalAlignment="Top" Height="25" SelectedIndex="0" HorizontalAlignment="Left" Width="275" FontSize="14" RenderTransformOrigin="0.508,1.722" />
 
         <!-- Umgebungen -->
-        <CheckBox x:Name="cbxDcsentw" Content="DCSENTW" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbxDcsEntw" Content="DCSENTW" Margin="30,355,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" FontSize="14" Height="18"/>
+        <CheckBox x:Name="cbxDcsTest" Content="DCSTEST" Margin="30,375,0,0" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" FontSize="14"/>
+        <CheckBox x:Name="cbxDcsProd" Content="DCSPROD" Margin="30,395,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" FontSize="14" Height="18"/>
+        <CheckBox x:Name="cbxStvmv" Content="STVMV" Margin="30,415,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" FontSize="14" Height="18"/>
+        <CheckBox x:Name="cbxSccm" Content="SCCM" Margin="30,435,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" FontSize="14" Height="18"/>
+
+
+        <!-- Auftragsnummer / INC -->
+        <Label x:Name="lblOrderNumber" Content="Auftragsnummer / Incident:" HorizontalAlignment="Left" Margin="367,45,0,0" VerticalAlignment="Top" Width="275" Height="30" FontSize="14"/>
+        <TextBox x:Name="tbxOrderNumber" HorizontalAlignment="Left" Margin="367,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="25" FontSize="14">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!-- Bemerkung -->
+        <Label x:Name="lblRemark" Content="Bemerkung:" HorizontalAlignment="Left" Margin="367,107,0,0" VerticalAlignment="Top" Width="275" Height="30" FontSize="14"/>
+        <TextBox x:Name="tbxRemark" HorizontalAlignment="Left" Margin="367,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="151" FontSize="12" AcceptsReturn="True" FontFamily="Consolas">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!-- Version der Software -->
+        <Label x:Name="lblSoftwareVersion" Content="Version der Software:" HorizontalAlignment="Left" Margin="367,334,0,0" VerticalAlignment="Top" Width="275" Height="30" FontSize="14"/>
+        <TextBox x:Name="tbxSoftwareVersion" HorizontalAlignment="Left" Margin="367,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="26" FontSize="14">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!-- E-Mail Checkbox -->
+        <CheckBox x:Name="cbxEmail" Content="In E-Mail aufnehmen?" Margin="367,410,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="275" FontSize="14" Height="18"/>
+
+
+        <!-- Cancel Button -->
+        <Button x:Name="btnCancel" Content="ABBRECHEN" HorizontalAlignment="Left" Margin="10,500,0,0" VerticalAlignment="Top" Height="37" Width="321" Background="White" BorderBrush="#FFEE4F3D" FontWeight="Bold" FontSize="14" Foreground="#FFEE4F3D">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Submit Button -->
+        <Button x:Name="btnAddPackage" Content="CHECK IN" HorizontalAlignment="Left" Margin="347,500,0,0" VerticalAlignment="Top" Height="37" Width="321" Background="White" BorderBrush="#FF4EBD4A" FontWeight="Bold" FontSize="14" Foreground="#FF4EBD4A">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Window>
