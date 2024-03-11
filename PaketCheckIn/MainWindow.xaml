@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PaketCheckIn"
         mc:Ignorable="d"
-        Title="MainWindow" Height="609" Width="698" Background="White" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="PaketCheckIn" Height="609" Width="698" Background="White" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid Height="592" VerticalAlignment="Top" HorizontalAlignment="Center" Width="678">
         <GroupBox Header="Paket-Optionen" Margin="10,20,0,0" HorizontalAlignment="Left" Width="321" Height="298" VerticalAlignment="Top" FontSize="12"/>
         <GroupBox Header="Umgebungen" Margin="10,325,0,0" HorizontalAlignment="Left" Width="321" Height="141" VerticalAlignment="Top" FontSize="12"/>
@@ -13,9 +13,7 @@
 
         <!-- Option wählen -->
         <Label x:Name="lblChooseOption" Content="Option wählen:" Margin="30,52,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="275" FontSize="14"/>
-        <ComboBox x:Name="cbChooseOption" Margin="30,82,0,0" VerticalAlignment="Top" Height="25" SelectedIndex="0" HorizontalAlignment="Left" Width="275" FontSize="14">
-            <ComboBoxItem Content="Test"></ComboBoxItem>
-        </ComboBox>
+        <ComboBox x:Name="cbChooseOption" Margin="30,82,0,0" VerticalAlignment="Top" Height="25" SelectedIndex="0" HorizontalAlignment="Left" Width="275" FontSize="14" />
 
         <!-- Ordner wählen -->
         <Label x:Name="lblChooseFolder" Content="Ordner wählen:" Margin="30,112,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="275" FontSize="14"/>
@@ -49,7 +47,7 @@
 
         <!-- Bemerkung -->
         <Label x:Name="lblRemark" Content="Bemerkung:" HorizontalAlignment="Left" Margin="367,107,0,0" VerticalAlignment="Top" Width="275" Height="30" FontSize="14"/>
-        <TextBox x:Name="tbxRemark" HorizontalAlignment="Left" Margin="367,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="151" FontSize="12" AcceptsReturn="True" FontFamily="Consolas">
+        <TextBox x:Name="tbRemark" HorizontalAlignment="Left" Margin="367,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="181" FontSize="12" AcceptsReturn="True" FontFamily="Consolas">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
@@ -59,7 +57,7 @@
 
         <!-- Version der Software -->
         <Label x:Name="lblSoftwareVersion" Content="Version der Software:" HorizontalAlignment="Left" Margin="367,334,0,0" VerticalAlignment="Top" Width="275" Height="30" FontSize="14"/>
-        <TextBox x:Name="tbxSoftwareVersion" HorizontalAlignment="Left" Margin="367,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="26" FontSize="14">
+        <TextBox x:Name="tbSoftwareVersion" HorizontalAlignment="Left" Margin="367,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="26" FontSize="14">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
