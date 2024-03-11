@@ -23,6 +23,19 @@ namespace PaketCheckIn
         public MainWindow()
         {
             InitializeComponent();
+
+            // ###################################################
+            // ############### FORM DEFAULT VALUES ############### 
+            // ###################################################
+
+
+            //Combo Box cbChooseOption
+            cbChooseOption.Items.Add("Neue Paketversion");
+            cbChooseOption.Items.Add("Bestehende Paketversion anpassen");
+            cbChooseOption.Items.Add("Neues Paket");
+
+            // Combo Box 
+            cbChooseFolder.IsEnabled = false;
         }
     }
 }
