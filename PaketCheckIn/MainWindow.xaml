@@ -79,7 +79,7 @@
         </Button>
 
         <!-- Submit Button -->
-        <Button x:Name="btnAddPackage" Content="CHECK IN" HorizontalAlignment="Left" Margin="347,500,0,0" VerticalAlignment="Top" Height="37" Width="321" Background="White" BorderBrush="#FF4EBD4A" FontWeight="Bold" FontSize="14" Foreground="#FF4EBD4A">
+        <Button x:Name="btnAddPackage" Content="CHECK IN" HorizontalAlignment="Left" Margin="347,500,0,0" VerticalAlignment="Top" Height="37" Width="321" Background="White" BorderBrush="#FF4EBD4A" FontWeight="Bold" FontSize="14" Foreground="#FF4EBD4A" Click="btnAddPackage_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="3"/>

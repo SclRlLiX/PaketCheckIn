@@ -36,6 +36,21 @@ namespace PaketCheckIn
 
             // Combo Box 
             cbChooseFolder.IsEnabled = false;
+
+
+
+
+        }
+
+        // ###################################################
+        // #################### BTN SUBMIT ###################
+        // ###################################################
+
+        private void btnAddPackage_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("TEST");
+            SvnFolderPackages svnFolderPackages = new SvnFolderPackages();
+            svnFolderPackages.GetPackagesWithSvnFolder();
         }
     }
 }
