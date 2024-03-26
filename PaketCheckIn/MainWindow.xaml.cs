@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -48,8 +49,8 @@ namespace PaketCheckIn
 
         private void btnAddPackage_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("TEST");
-            SvnFolderPackages svnFolderPackages = new SvnFolderPackages();
+            Debug.WriteLine("TEST");
+            SvnFolderPackages svnFolderPackages = new();
             svnFolderPackages.GetPackagesWithSvnFolder();
         }
     }
